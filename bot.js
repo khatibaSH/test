@@ -2112,7 +2112,7 @@ client.on("message", message => {
 });
 
 var adminprefix = '&'
-const developers = ["518478951543209991"] //الاي دى حقك
+const developers = ["499540032277708824"] //الاي دى حقك
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
