@@ -2111,36 +2111,36 @@ client.on("message", message => {
     }
 });
 
-var adminprefix = '&'
+var adminprefixs = '&'
 const developers = ["499540032277708824"] //الاي دى حقك
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
      
-  if (message.content.startsWith(adminprefix + 'setg')) {
+  if (message.content.startsWith(adminprefixs + 'setg')) {
     client.user.setGame(argresult);
       message.channel.send(`By ZEUS   ${argresult}**`)
   } else
-     if (message.content === (adminprefix + "leave")) {
+     if (message.content === (adminprefixs + "leave")) {
     message.guild.leave();        
   } else  
-  if (message.content.startsWith(adminprefix + 'setw')) {
+  if (message.content.startsWith(adminprefixs + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`By ZEUS   ${argresult}**`)
   } else
-  if (message.content.startsWith(adminprefix + 'setl')) {
+  if (message.content.startsWith(adminprefixs + 'setl')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`B   ${argresult}**`)
   } else
-  if (message.content.startsWith(adminprefix + 'sets')) {
+  if (message.content.startsWith(adminprefixs + 'sets')) {
     client.user.setGame(argresult, "https://www.twitch.tv/One");
       message.channel.send(`By ZEUS`)
   }
-  if (message.content.startsWith(adminprefix + 'setname')) {
+  if (message.content.startsWith(adminprefixs + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content.startsWith(adminprefix + 'setavatar')) {
+if (message.content.startsWith(adminprefixs + 'setavatar')) {
   client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
