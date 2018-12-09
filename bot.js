@@ -2116,7 +2116,7 @@ const devs1 = ['499540032277708824','326873410313388032'];
 
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
-    if (message.content.startsWith(prefix + 'setS')) {
+    if (message.content.startsWith(adminprefixs + 'setS')) {
       if (!devs1.includes(message.author.id)) return message.channel.send("<@499540032277708824> only this guy can do restart the bot so don't try again :wink:.");
       message.delete();
       client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
