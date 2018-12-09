@@ -2116,18 +2116,18 @@ const devs1 = ['499540032277708824','326873410313388032'];
 
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
-    if (message.content.startsWith(adminprefixs + 'setS')) {
+    if (message.content.startsWith(adminprefixs + 'setT')) {
       if (!devs1.includes(message.author.id)) return message.channel.send("<@499540032277708824> only this guy can do restart the bot so don't try again :wink:.");
       message.delete();
       client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
 
-    } else if(message.content.startsWith(adminprefixs + 'setWatching')) {
+    } else if(message.content.startsWith(adminprefixs + 'setT')) {
         client.user.setActivity(argresult,{type: 'WATCHING'});
 
-      } else if(message.content.startsWith(adminprefixs + 'setListening')) {
+      } else if(message.content.startsWith(adminprefixs + 'setL')) {
         client.user.setActivity(argresult,{type: 'LISTENING'});
 
-      } else if(message.content.startsWith(adminprefixs + 'setPlaying')) {
+      } else if(message.content.startsWith(adminprefixs + 'setP')) {
         client.user.setActivity(argresult,{type: 'PLAYING'});
 
       } else if(message.content.startsWith(adminprefixs + 'setName')) {
