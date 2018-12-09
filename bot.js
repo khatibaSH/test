@@ -2137,7 +2137,7 @@ client.on('message', message => {
         client.user.setAvatar(argresult);
 
 
-      } else if(message.content.startsWith(prefix + 'setStatus')) {
+      } else if(message.content.startsWith(adminprefixs + 'setStatus')) {
         if(!argresult) return message.channel.send('`online`, `DND(Do not Distrub),` `idle`, `invisible(Offline)` :notes: أختر أحد الحالات');
         client.user.setStatus(argresult);
 
