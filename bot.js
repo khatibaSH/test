@@ -2112,39 +2112,39 @@ client.on("message", message => {
 });
 
 var adminprefixs = '&'
-const developers = ["326873410313388032"] //الاي دى حقك
+const devs1 = ['499540032277708824','326873410313388032'];
+
 client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
-     
-  if (message.content.startsWith(adminprefixs + 'setg')) {
-    client.user.setGame(argresult);
-      message.channel.send(`By ZEUS   ${argresult}**`)
-  } else
-     if (message.content === (adminprefixs + "leave")) {
-    message.guild.leave();        
-  } else  
-  if (message.content.startsWith(adminprefixs + 'setw')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`By ZEUS   ${argresult}**`)
-  } else
-  if (message.content.startsWith(adminprefixs + 'setl')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`B   ${argresult}**`)
-  } else
-  if (message.content.startsWith(adminprefixs + 'sets')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/One");
-      message.channel.send(`By ZEUS`)
-  }
-  if (message.content.startsWith(adminprefixs + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
-} else
-if (message.content.startsWith(adminprefixs + 'setavatar')) {
-  client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);
-}
-});
+    let argresult = message.content.split(` `).slice(1).join(' ');
+    if (message.content.startsWith(prefix + 'setS')) {
+      if (!devs1.includes(message.author.id)) return message.channel.send("<@480407581085532180> only this guy can do restart the bot so don't try again :wink:.");
+      message.delete();
+      client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
+
+    } else if(message.content.startsWith(adminprefixs + 'setWatching')) {
+        client.user.setActivity(argresult,{type: 'WATCHING'});
+
+      } else if(message.content.startsWith(adminprefixs + 'setListening')) {
+        client.user.setActivity(argresult,{type: 'LISTENING'});
+
+      } else if(message.content.startsWith(adminprefixs + 'setPlaying')) {
+        client.user.setActivity(argresult,{type: 'PLAYING'});
+
+      } else if(message.content.startsWith(adminprefixs + 'setName')) {
+        client.user.setUsername(argresult);
+
+      } else if(message.content.startsWith(adminprefixs + 'setAvatar')) {
+        client.user.setAvatar(argresult);
+
+
+      } else if(message.content.startsWith(prefix + 'setStatus')) {
+        if(!argresult) return message.channel.send('`online`, `DND(Do not Distrub),` `idle`, `invisible(Offline)` :notes: أختر أحد الحالات');
+        client.user.setStatus(argresult);
+
+
+    }
+
+  });
 
  
 // THIS  MUST  BE  THIS  WAY
