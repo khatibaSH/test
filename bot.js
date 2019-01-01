@@ -2121,7 +2121,7 @@ client.on('message', message => {
       message.delete();
       client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
 
-    } else if(message.content.startsWith(adminprefixs + 'setT')) {
+    } else if(message.content.startsWith(adminprefixs + 'setW')) {
         client.user.setActivity(argresult,{type: 'WATCHING'});
 
       } else if(message.content.startsWith(adminprefixs + 'setL')) {
